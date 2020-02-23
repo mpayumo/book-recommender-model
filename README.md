@@ -12,7 +12,7 @@ The **goal** of this project is to demonstrate the applicability of matrix facto
 
 ## Data Source
 
-The dataset comes in three CSV files that separately contain information on the following:
+> ### The dataset comes in three CSV files that separately contain information on the following:
 
 <ul>
     <li>User demographic information</li>
