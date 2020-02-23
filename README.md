@@ -2,7 +2,7 @@
 
 > by: [:globe_with_meridians: Mark Payumo](https://www.linkedin.com/in/markpayumo/)
 
-Exploratory data analysis and matrix factorization and deep learning model development of dataset from [Book Crossing](https://www.bookcrossing.com).
+Exploratory data analysis, and matrix factorization and deep learning model development of dataset from [Book Crossing](https://www.bookcrossing.com).
 
 ## Description
 
