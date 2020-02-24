@@ -53,8 +53,11 @@ def plot_distribution(data_source, x_value, y_value, xlabel, ylabel, title, sns_
     plt.tight_layout()
     plt.savefig('img/rename_this_image.jpg')
 
+def plot_scatter():
+    pass
 
-def scatter3D(x_val, y_val, z_val, x_label, y_label, z_label):
+
+def plot_scatter3D(x_val, y_val, z_val, x_label, y_label, z_label):
     fig = plt.figure(1, figsize=(12,7))
     plt.clf()
     ax = Axes3D(fig, rect=[0,0,0.95,1], elev=48, azim=134)
