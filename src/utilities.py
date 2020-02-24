@@ -20,22 +20,22 @@ def distribution_table(col1):
     return dist
 
 # Frequency Distribution Plot
-def plot_distribution(data_source, x_value, y_value, xlabel, ylabel, title, sns_palette1='CMRmap', bar_palette2='terrain'):
+def plot_distribution(data_source, x_value, y_value, xlabel, ylabel, title, sns_palette='CMRmap', bar_palette='terrain'):
     '''
     Rename columns appropriately
     prior to plotting distribution.
     '''
     sns.set(style='whitegrid',
-        palette=sns_palette1,
+        palette=sns_palette,
         font_scale=2.5, 
         color_codes=True)
 
     fig, ax = plt.subplots(figsize=(25,16))
     ax = sns.barplot(x=x_value, y=y_value,
                     data=data_source,
-                    palette=bar_palette2)
+                    palette=bar_palette)
     ax.set_xticklabels(ax.get_xticklabels(),
-                    rotation=90,
+                    # rotation=90,
                     fontsize=30)
     ax.set_xlabel(xlabel,
                 fontsize=40)
@@ -43,7 +43,7 @@ def plot_distribution(data_source, x_value, y_value, xlabel, ylabel, title, sns_
                 fontsize=40)
     ax.set_title(title,
                 fontsize=50,
-                labelpad=40)
+                pad=25.0)
     # plt.text(3, 750000, 'Clear = 805,381',
     #         fontsize=35)
     # plt.text(8, 305000, 'Fair = 333,852',
