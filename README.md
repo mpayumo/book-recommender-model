@@ -42,7 +42,7 @@ Book Crossing has a sliding scale of 1 to 10 that users utilize to rate the book
 
 ### Countries of Origin
 
-The U.S. tops the list of users' countries of origin at 139,711. Below is just the top 20 out of 707 user-defined countries, many of which are gibberish entries that required further cleaning through text manipulation.
+The U.S. tops the list of users' countries of origin at 139,711. Below is just the top 20 out of 707 user-defined countries, extracted from the users' text addresses where many are gibberish entries that required further cleaning through text manipulation.
 
 <p align = "center"><img src = "img/top20_countries.jpg"></p>
 
