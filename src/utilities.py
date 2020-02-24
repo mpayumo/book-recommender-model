@@ -1,34 +1,11 @@
 import pandas as pd 
 import numpy as np 
 import matplotlib as mpl 
-import matplotlib.pyplot as plt 
-%matplotlib inline
-plt.style.use('fast')
-
+import matplotlib.pyplot as plt
 import seaborn as sns
 import folium
 from folium.plugins import MarkerCluster
 
-def help():
-    message = '''
-    ================================================
-    For this recommender system,
-    utilities can help you with 
-    the following:
-    • csv(path)
-    • palette()
-    • distribution_table(col1)
-    • def plot_distribution(data_source, 
-                            x_value, 
-                            y_value, 
-                            xlabel, 
-                            ylabel, 
-                            title, 
-                            sns_palette1='CMRmap', 
-                            bar_palette2='terrain')
-    ================================================
-    '''
-    print(message)
 
 def palette():
     message = '''
@@ -62,7 +39,7 @@ def palette():
     =========================================================================
     '''
     print(message)
-
+    
 # Read CSV
 def csv(path):
     df = pd.read_csv(path, encoding='iso8859-1', header='infer', delimiter=';', error_bad_lines=False)
@@ -97,7 +74,8 @@ def plot_distribution(data_source, x_value, y_value, xlabel, ylabel, title, sns_
     ax.set_ylabel(ylabel,
                 fontsize=40)
     ax.set_title(title,
-                fontsize=50)
+                fontsize=50,
+                labelpad=40)
     # plt.text(3, 750000, 'Clear = 805,381',
     #         fontsize=35)
     # plt.text(8, 305000, 'Fair = 333,852',
@@ -106,5 +84,4 @@ def plot_distribution(data_source, x_value, y_value, xlabel, ylabel, title, sns_
     #         fontsize=35)
     plt.tight_layout()
     plt.savefig('img/rename_this_image.jpg')
-
     
