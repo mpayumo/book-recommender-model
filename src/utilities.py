@@ -19,6 +19,26 @@ def distribution_table(col1):
     dist.reset_index(inplace=True)
     return dist
 
+def plot_horizontal_distribution(x_val, y_val, df, title, color, xlim, xlabel):
+    '''
+    Rename columns appropriately
+    prior to plotting distribution.
+    '''
+    sns.set(style='whitegrid',
+        palette='CMRmap',
+        font_scale=2.5, 
+        color_codes=True)
+    sns.set_color_codes('pastel')
+    sns.barplot(x = x_val, y = y_val, data=df, label=title, color=color)
+    # ax.legend(n_col=2, loc='lower_right', frameon=True)
+    ax.set(xlim=xlim, ylabel="", xlabel=xlabel)
+    sns.despine(left=False, right=False, top=False, bottom=False)
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.savefig('img/new_horizontal_bar_graph.jpg');
+
+    
+
 # Frequency Distribution Plot
 def plot_distribution(data_source, x_value, y_value, xlabel, ylabel, title, sns_palette='CMRmap', bar_palette='terrain'):
     '''
@@ -54,6 +74,7 @@ def plot_distribution(data_source, x_value, y_value, xlabel, ylabel, title, sns_
     plt.savefig('img/rename_this_image.jpg')
 
 def plot_scatter():
+
     pass
 
 

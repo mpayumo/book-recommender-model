@@ -34,9 +34,17 @@ The **goal** of this project is to demonstrate the applicability of matrix facto
 
 ## Exploratory Data Analysis
 
+### Rating Scale
+
 Book Crossing has a sliding scale of 1 to 10 that users utilize to rate the books. There is an overwhelming amount of users in 2004 that gave the books a rating of 0.
 
 <p align = "center"><img src = "img/distribution_book_ratings.jpg"></p>
+
+### Countries of Origin
+
+The U.S. tops the list of users' countries of origin at 139,711. Below is just the top 20 out of 707 user-defined countries, many of which are gibberish entries that required further cleaning through text manipulation.
+
+<p align = "center"><img src = "img/top20_countries.jpg"></p>
 
 ---
 
