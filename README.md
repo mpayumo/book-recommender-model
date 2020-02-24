@@ -37,7 +37,6 @@ The **goal** of this project is to demonstrate the applicability of matrix facto
 Book Crossing has a sliding scale of 1 to 10 that users utilize to rate the books. There is an overwhelming amount of users in 2004 that gave the books a rating of 0.
 
 <p align = "center"><img src = "img/distribution_book_ratings.jpg"></p>
-
 ---
 
 ## Modeling
