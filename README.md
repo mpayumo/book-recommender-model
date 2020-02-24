@@ -34,6 +34,8 @@ The **goal** of this project is to demonstrate the applicability of matrix facto
 
 ## Exploratory Data Analysis
 
+
+
 ## Modeling
 
 ## Future Direction
