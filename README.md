@@ -40,6 +40,12 @@ Book Crossing has a sliding scale of 1 to 10 that users utilize to rate the book
 
 <p align = "center"><img src = "img/distribution_book_ratings.jpg"></p>
 
+### Rated Books by Publication Year
+
+Books published in 2002 were rated the most by 17,627 users. Those that were published between 1975 to 2002 received the most ratings.
+
+<p align = "center"><img src = "img/timeseries.jpg"></p>
+
 ### Countries of Origin
 
 The U.S. tops the list of users' countries of origin at 139,711. Below is just the top 20 out of 707 user-defined countries, which were extracted from the users' text addresses where many are gibberish entries that required further cleaning through text manipulation.
