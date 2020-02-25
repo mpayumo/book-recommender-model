@@ -17,7 +17,51 @@ def csv(path):
 def distribution_table(col1):
     dist = col1.value_counts().to_frame()
     dist.reset_index(inplace=True)
-    return dist
+    return distYear
+
+def plot_donut(label, count, title):
+    fig, ax = plt.subplots(figsize=(12, 7), subplot_kw=dict(aspect="equal"))
+
+    wedges, texts = ax.pie(count, wedgeprops=dict(width=0.5), startangle=-40)
+
+    bbox_props = dict(boxstyle="square,pad=0.3", fc="w", ec="k", lw=0.72)
+    kw = dict(arrowprops=dict(arrowstyle="-"),
+            bbox=bbox_props, zorder=0, va="center")
+
+    for i, p in enumerate(wedges):
+        ang = (p.theta2 - p.theta1)/2. + p.theta1
+        y = np.sin(np.deg2rad(ang))
+        x = np.cos(np.deg2rad(ang))
+        horizontalalignment = {-1: "right", 1: "left"}[int(np.sign(x))]
+        connectionstyle = "angle,angleA=0,angleB={}".format(ang)
+        kw["arrowprops"].update({"connectionstyle": connectionstyle})
+        ax.annotate(label[i], xy=(x, y), xytext=(1.35*np.sign(x), 1.4*y),
+                    horizontalalignment=horizontalalignment, **kw)
+
+    ax.set_title(title)
+    plt.savefig('donut.jpg');
+
+def plot_exploding_donut():
+    # The slices will be ordered and plotted counter-clockwise.
+    labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
+    sizes = [15, 30, 45, 10]
+    colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
+    explode = (0, 0, 0, 0)  # explode a slice if required
+    explode = (0,0,0,0,0,0,0.3,0.5,0,0.8)
+
+    plt.pie(sizes, explode=explode, labels=labels, colors=colors,
+            autopct='%1.1f%%', shadow=True)
+            
+    #draw a circle at the center of pie to make it look like a donut
+    centre_circle = plt.Circle((0,0),0.75,color='black', fc='white',linewidth=1.25)
+    fig = plt.gcf()
+    fig.gca().add_artist(centre_circle)
+
+
+    # Set aspect ratio to be equal so that pie is drawn as a circle.
+    plt.axis('equal')
+    plt.show();  
+
 
 def plot_horizontal_distribution(x_val, y_val, df, title, color, xlim, xlabel):
     '''
@@ -37,45 +81,65 @@ def plot_horizontal_distribution(x_val, y_val, df, title, color, xlim, xlabel):
     plt.tight_layout()
     plt.savefig('img/new_horizontal_bar_graph.jpg');
 
-    
 
 # Frequency Distribution Plot
-def plot_distribution(data_source, x_value, y_value, xlabel, ylabel, title, sns_palette='CMRmap', bar_palette='terrain'):
+def plot_horizontal_distribution(x_val, y_val, df, title, color, xlim, xlabel, ylabel):
     '''
     Rename columns appropriately
     prior to plotting distribution.
     '''
     sns.set(style='whitegrid',
-        palette=sns_palette,
+        palette='CMRmap',
         font_scale=2.5, 
         color_codes=True)
-
-    fig, ax = plt.subplots(figsize=(25,16))
-    ax = sns.barplot(x=x_value, y=y_value,
-                    data=data_source,
-                    palette=bar_palette)
-    ax.set_xticklabels(ax.get_xticklabels(),
-                    # rotation=90,
-                    fontsize=30)
-    ax.set_xlabel(xlabel,
-                fontsize=40)
-    ax.set_ylabel(ylabel,
-                fontsize=40)
+    sns.set_color_codes('pastel')
+    sns.barplot(x = x_val, y = y_val, data=df, label=title, color=color)
     ax.set_title(title,
-                fontsize=50,
-                pad=25.0)
-    # plt.text(3, 750000, 'Clear = 805,381',
-    #         fontsize=35)
-    # plt.text(8, 305000, 'Fair = 333,852',
-    #         fontsize=35)
-    # plt.text(38.75, 350000, 'Overcast = 381,396',
-    #         fontsize=35)
+                fontsize=40,
+                pad=15.0)
+    ax.set_ylabel(ylabel,
+                 fontsize=30)
+    ax.set_xlabel(xlabel,
+                 fontsize=30)
+    sns.despine(top=True, left=False, bottom=True, right=True)
+    plt.xticks(rotation=45,
+              fontsize=35)
+    plt.yticks(fontsize=35)
+    for p in ax.patches:
+        width=p.get_width()
+        plt.text(5 + p.get_width(), p.get_y() + 0.55 * p.get_height(), '{:.0f}'.format(int(width)), va='center')
     plt.tight_layout()
-    plt.savefig('img/rename_this_image.jpg')
+    plt.savefig('img/new_horizontal_bar_graph.jpg');
 
-def plot_scatter():
+def plot_line(x_val, y_val, title, xlabel, ylabel, xlim, ylim, color):
+    ax.plot(x_val,
+            y_val,
+            '-.',
+            linestyle='solid',
+            linewidth=3,
+            color=color
+    )
 
-    pass
+    ax.xaxis.set_tick_params(pad=20)
+    ax.tick_params(axis='x',
+                pad=2,
+                grid_linewidth=1)
+    plt.xlim(xlim)
+    plt.ylim(ylim)
+    plt.xticks(rotation=45,
+            fontsize=25)
+    plt.yticks(fontsize=25)
+    plt.title(title,
+            fontsize=30)
+    plt.xlabel(xlabel,
+            fontsize=30,
+            labelpad=20)
+    plt.ylabel(ylabel,
+            fontsize=30,
+            labelpad=20)
+
+    plt.tight_layout()
+    plt.savefig('img/timeseries.jpg');
 
 
 def plot_scatter3D(x_val, y_val, z_val, x_label, y_label, z_label):
