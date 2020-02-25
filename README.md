@@ -42,7 +42,7 @@ Book Crossing has a sliding scale of 1 to 10 that users utilize to rate the book
 
 The donut chart below shows those books that were rated "0" own the lion's share of the distribution.
 
-<p align = "center"><img src = "img/donut.jpg"></p>
+<p align = "center"><img src = "img/wedge_donut.jpg"></p>
 
 ### Rated Books by Publication Year
 
