@@ -40,6 +40,10 @@ Book Crossing has a sliding scale of 1 to 10 that users utilize to rate the book
 
 <p align = "center"><img src = "img/distribution_book_ratings.jpg"></p>
 
+The donut chart below shows those books that were rated "0" own the lion's share of the distribution.
+
+<p align = "center"><img src = "img/donut.jpg"></p>
+
 ### Rated Books by Publication Year
 
 Books published in 2002 were rated the most by 17,627 users. Those that were published between 1975 to 2002 received the most ratings.
