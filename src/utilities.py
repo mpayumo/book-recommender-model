@@ -39,28 +39,30 @@ def plot_donut(label, count, title):
                     horizontalalignment=horizontalalignment, **kw)
 
     ax.set_title(title)
-    plt.savefig('donut.jpg');
+    plt.savefig('img/new_donut_plot.jpg');
 
-def plot_exploding_donut():
-    # The slices will be ordered and plotted counter-clockwise.
-    labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
-    sizes = [15, 30, 45, 10]
-    colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
-    explode = (0, 0, 0, 0)  # explode a slice if required
-    explode = (0,0,0,0,0,0,0.3,0.5,0,0.8)
+def plot_exploding_donut(title, pie_val, pie_labels, explode_list):
+    '''
+    Don't forget to 
+    import matplotlib.pyplot as plt 
 
-    plt.pie(sizes, explode=explode, labels=labels, colors=colors,
-            autopct='%1.1f%%', shadow=True)
-            
-    #draw a circle at the center of pie to make it look like a donut
-    centre_circle = plt.Circle((0,0),0.75,color='black', fc='white',linewidth=1.25)
-    fig = plt.gcf()
-    fig.gca().add_artist(centre_circle)
+    and set:
 
+    fig = plt.subplots(figsize=(15,10))
+    '''
+    # Create a circle for the center of the plot
+    my_circle=plt.Circle( (0,0), 0.7, color='white')
 
-    # Set aspect ratio to be equal so that pie is drawn as a circle.
-    plt.axis('equal')
-    plt.show();  
+    # Custom wedges
+    plt.pie(pie_val, 
+            labels=pie_labels, 
+            wedgeprops = {'linewidth' : 2, 'edgecolor' : 'white' }, explode=explode_list
+        )
+    plt.title(title,
+            fontsize=25)
+    p=plt.gcf()
+    p.gca().add_artist(my_circle)
+    plt.savefig('img/new_wedge_donut.jpg');
 
 
 def plot_horizontal_distribution(x_val, y_val, df, title, color, xlim, xlabel):
@@ -187,4 +189,19 @@ def palette():
     =========================================================================
     '''
     print(message)
+
+def what_to_do():
+    message = '''
+    ========================================================================= \n
+    csv(path)
+    distribution_table(col1)
+    plot_donut(label, count, title)
+    plot_exploding_donut(title, pie_val, pie_labels, explode_list)
+    plot_horizontal_distribution(x_val, y_val, df, title, color, xlim, xlabel)
+    plot_line(x_val, y_val, title, xlabel, ylabel, xlim, ylim, color)
+    plot_scatter3D(x_val, y_val, z_val, x_label, y_label, z_label)
+    palette() \n
+    =========================================================================
+    '''
+    return message
     
