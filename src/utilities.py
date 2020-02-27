@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib as mpl 
 import matplotlib.pyplot as plt
 import seaborn as sns
-import folium
-from folium.plugins import MarkerCluster
+# import folium
+# from folium.plugins import MarkerCluster
 from mpl_toolkits.mplot3d import Axes3D
 
     
@@ -192,7 +192,7 @@ def palette():
 
 def what_to_do():
     message = '''
-    ========================================================================= \n
+    =========================================================================
     csv(path)
     distribution_table(col1)
     plot_donut(label, count, title)
@@ -200,7 +200,7 @@ def what_to_do():
     plot_horizontal_distribution(x_val, y_val, df, title, color, xlim, xlabel)
     plot_line(x_val, y_val, title, xlabel, ylabel, xlim, ylim, color)
     plot_scatter3D(x_val, y_val, z_val, x_label, y_label, z_label)
-    palette() \n
+    palette()
     =========================================================================
     '''
     return message
