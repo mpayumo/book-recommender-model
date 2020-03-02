@@ -43,6 +43,10 @@ The donut chart below shows those books that were rated "0" own the lion's share
 
 <p align = "center"><img src = "img/wedge_donut.jpg"></p>
 
+While there is no correlation between average rating and the rating count, this joint plot nevertheless shows that average user ratings cluster between 2 to 5.
+
+<p align = "center"><img src = "img/jointplot.jpg"></p>
+
 ### Rated Books by Publication Year
 
 Books published in 2002 were rated the most by 17,627 users. Those that were published between 1975 to 2002 received the most ratings.
