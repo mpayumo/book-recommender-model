@@ -73,7 +73,7 @@ This recommender system is based on heavy use of the **Surprise** package that a
 
 <p align = "center"><img src = "img/surprise_results.jpg"></p>
 
-We then set our top N recommended books to 3, but the model is flexible to recommend as many as there are in the predictions. The top 3 book titles are recommended for our top 5 random users as shown below.
+BaselineOnly becomes our algorithm of choice as it shows the most promise with the lowest RMSE of <code>3.329897413613890</code>. We then set our top N recommended books to 3, but the model is flexible to recommend as many as there are in the predictions. The top 3 book titles are recommended for our top 5 random users as shown below.
 <br>
 <br>
 <p align = "center"><img src = "img/top3_books.jpg"></p>
