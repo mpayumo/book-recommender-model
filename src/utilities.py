@@ -176,6 +176,18 @@ def get_Ui(iid):
     except ValueError:
         return 0
 
+def get_top3_recommendations(predictions, topN = 3):
+     
+    top_recs = defaultdict(list)
+    for uid, iid, true_r, est, _ in predictions:
+        top_recs[uid].append((iid, est))
+     
+    for uid, user_ratings in top_recs.items():
+        user_ratings.sort(key = lambda x: x[1], reverse = True)
+        top_recs[uid] = user_ratings[:topN]
+     
+    return top_recs
+
 def palette():
     message = '''
     =========================================================================
