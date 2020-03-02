@@ -3,8 +3,6 @@ import numpy as np
 import matplotlib as mpl 
 import matplotlib.pyplot as plt
 import seaborn as sns
-# import folium
-# from folium.plugins import MarkerCluster
 from mpl_toolkits.mplot3d import Axes3D
 
     
@@ -154,8 +152,29 @@ def plot_scatter3D(x_val, y_val, z_val, x_label, y_label, z_label):
     ax.scatter(x_val, y_val, z_val, c=labels.astype(np.float))
     plt.savefig('img/3Dscatter.jpg')
 
-def heat_it():
-    pass
+def get_Iu(uid):
+    """ return the number of items rated by given user
+    args: 
+      uid: the id of the user
+    returns: 
+      the number of items rated by the user
+    """
+    try:
+        return len(trainset.ur[trainset.to_inner_uid(uid)])
+    except ValueError: # user was not part of the trainset
+        return 0
+    
+def get_Ui(iid):
+    """ return number of users that have rated given item
+    args:
+      iid: the raw id of the item
+    returns:
+      the number of users that have rated the item.
+    """
+    try: 
+        return len(trainset.ir[trainset.to_inner_iid(iid)])
+    except ValueError:
+        return 0
 
 def palette():
     message = '''
