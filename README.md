@@ -63,6 +63,13 @@ The U.S. tops the list of users' countries of origin at 139,711. Below is just t
 
 ## Modeling
 
+### Pearson R
+
+Modeling starts out with a 
+
+### Algorithms
+
+<p align = "center"><img src = "img/surprise_results.jpg"></p>
 
 
 ## Future Direction
