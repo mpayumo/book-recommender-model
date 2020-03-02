@@ -8,15 +8,15 @@ Exploratory data analysis and recommender model development of dataset from [Boo
 
 ![The New York Public Library](img/nyc_library.jpg "The New York Public Library by David Iliff via Wikimedia Commons")
 
-The **goal** of this project is to demonstrate the applicability of matrix factorization and deep learning when modeling and developing a recommender system—in this case, a **book recommender system**. It utilizes the dataset that was collected by [Cai-Nicolas Ziegler](http://www2.informatik.uni-freiburg.de/~cziegler/BX/WWW-2005-Preprint.pdf) during a four-week crawl (Aug. to Sep. 2004) of the Book Crossing community.
+The **goal** of this project is to demonstrate development of a recommender system that highlights trends hidden behind user data that can potentially inform business development of a book store or book club like Book Crossing, and give its users a go-to resource for other books that might interest them and have them looking forward to as they engage in "the practice of leaving a book in a public place to be picked up and read by others, who then do likewise." 
 
 ## Data Source
 
-> ### The dataset comes in three CSV files that separately contain the following:
+The model utilizes the dataset that was collected by [Cai-Nicolas Ziegler](http://www2.informatik.uni-freiburg.de/~cziegler/BX/WWW-2005-Preprint.pdf) during a four-week crawl (Aug. to Sep. 2004) of the Book Crossing community. It comes in three CSV files that separately contain the following:
 
 <ul>
-    <li>User demographic information</li>
-    <li>Book ratings</li>
+    <li>User demographic information such as age and address</li>
+    <li>Book ratings on a scale of 0 to 10</li>
     <li>Book titles along with author, publisher, publication, ISBN, etc. </li>
 </ul>
 
@@ -36,7 +36,7 @@ The **goal** of this project is to demonstrate the applicability of matrix facto
 
 ### Rating Scale
 
-Book Crossing has a sliding scale of 1 to 10 that users utilize to rate the books. There is an overwhelming amount of users in 2004 that gave the books a rating of 0. Overall, there is a total of <code>1,149,780</code> ratings during the specified time period.
+Book Crossing has a sliding scale of 0 to 10 that users utilize to rate the books. There is an overwhelming amount of users in 2004 that gave the books a rating of 0. Overall, there is a total of <code>1,149,780</code> ratings during the specified time period.
 
 <p align = "center"><img src = "img/distribution_book_ratings.jpg"></p>
 
@@ -58,5 +58,7 @@ The U.S. tops the list of users' countries of origin at 139,711. Below is just t
 ---
 
 ## Modeling
+
+
 
 ## Future Direction
