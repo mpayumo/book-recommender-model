@@ -22,15 +22,14 @@ The model utilizes the dataset that was collected by [Cai-Nicolas Ziegler](http:
 
 ## Tech Stack
 
-> ### The following were used in the development of the recommender system:
+The following were used in the development of the recommender system:
 
-<ul>
-    <li>Python</li>
-    <li>JupyterLab</li>
-    <li>Amazon Web Services</li>
-    <li>Git</li>
-<!--     <li></li> -->
-</ul>
+| Tools               | Packages     |
+| :----:              | :----:       |
+| Python              | Pandas       |
+| JupyterLab          | Surprise     |
+| AWS Cloud Computing | Matplotlib   |
+| Git                 | Seaborn      |
 
 ## Exploratory Data Analysis
 
