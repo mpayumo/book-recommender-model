@@ -1,6 +1,7 @@
 '''
 This model recommends books from the dataset using the best algorithm
-as evaluated using the lowest RMSE.
+as evaluated using the lowest RMSE. It also aims to generate book titles
+alongside the recommended ISBN numbers.
 '''
 
 import pandas as pd
