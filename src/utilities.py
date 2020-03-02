@@ -5,6 +5,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from mpl_toolkits.mplot3d import Axes3D
 
+from src.utilities import *
+import surprise
+from surprise import SVD
+from surprise import Reader
+from surprise import Dataset
+from surprise import BaselineOnly, SVD, NMF, KNNBasic, KNNBaseline, KNNWithMeans, NormalPredictor
+from surprise.model_selection import cross_validate, train_test_split
+from surprise import accuracy
+from collections import defaultdict
+
     
 # Read CSV
 def csv(path):
@@ -231,8 +241,10 @@ def what_to_do():
     plot_horizontal_distribution(x_val, y_val, df, title, color, xlim, xlabel)
     plot_line(x_val, y_val, title, xlabel, ylabel, xlim, ylim, color)
     plot_scatter3D(x_val, y_val, z_val, x_label, y_label, z_label)
+    get_top3_recommendations(predictions, topN = 3)
     palette()
     =========================================================================
     '''
+
     return message
     
