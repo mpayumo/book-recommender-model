@@ -65,7 +65,7 @@ The U.S. tops the list of users' countries of origin at 139,711. Below is just t
 
 ### Pearson R
 
-Modeling starts out with a 
+Modeling began with Pearson correlation as a basic form of model, allowing us to recommend the top 10 most rated books as well as pick out those that are strongly correlated with 
 
 ### Algorithms
 
