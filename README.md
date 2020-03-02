@@ -65,11 +65,16 @@ The U.S. tops the list of users' countries of origin at 139,711. Below is just t
 
 ### Pearson R
 
-Modeling began with Pearson correlation as a basic form of model, allowing us to recommend the top 10 most rated books as well as pick out those that are strongly correlated with 
+Modeling began with Pearson correlation as a basic form of model, allowing us to recommend the top 10 most rated books as well as pick out those that are strongly correlated to a book of choice based on ISBN. The Pearson R model is [here](https://github.com/mpayumo/book-recommender-model/tree/master/model)
 
 ### Algorithms
 
+This recommender system is based on heavy use of the Surprise package that allowed us to iterate and cross-validate through different algortihms as shown below. Cross-validation was set to 5 folds and utilized the root mean squared error (RMSE) as our evaluation metric to determine which algorithm will give us the best predictions. The iteration is shown on the table below.
+
 <p align = "center"><img src = "img/surprise_results.jpg"></p>
 
+We then set our top N recommended books to 3, but the model is flexible to recommend as many as there in the predictions. The top 3 books are recommended for our top 5 random users as shown below.
+
+<p align = "center"><img src = "img/top3_books.jpg"></p>
 
 ## Future Direction
