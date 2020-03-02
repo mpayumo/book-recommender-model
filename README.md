@@ -69,7 +69,7 @@ Modeling began with Pearson correlation as a basic form of model, allowing us to
 
 ### Algorithms
 
-This recommender system is based on heavy use of the Surprise package that allowed us to iterate and cross-validate through different algortihms as shown below. Cross-validation was set to 5 folds and utilized the root mean squared error (RMSE) as our evaluation metric to determine which algorithm will give us the best predictions. The iteration is shown on the table below.
+This recommender system is based on heavy use of the **Surprise** package that allowed us to iterate and cross-validate through different algortihms as shown below. Cross-validation was set to **5 folds** and utilized the **root mean squared error (RMSE)** as our **evaluation metric** to determine which algorithm will give us the best predictions. The iteration is shown on the table below.
 
 <p align = "center"><img src = "img/surprise_results.jpg"></p>
 
@@ -78,5 +78,12 @@ We then set our top N recommended books to 3, but the model is flexible to recom
 <br>
 <p align = "center"><img src = "img/top3_books.jpg"></p>
 
-## Future Direction
+## Future Direction and Next Steps
 
+The model will further benefit from the following for improvement and more accurate results:
+
+<ul>
+    <li>Deep Learning</li>
+    <li>Fusion with Flask </li>
+    <li>Additional data</li>
+</ul>
