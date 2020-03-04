@@ -24,7 +24,7 @@ The model utilizes the dataset that was collected by [Cai-Nicolas Ziegler](http:
 
 > ### The following were used in the development of the recommender system:
 
-<p align = "center"><img src = "img/aws.png" height="150" width="500"><br><img src = "img/packages.jpg" height="150" width="250"><img src = "img/git.png" height="150" width="175"></p>
+<p align = "center"><img src = "img/aws.png" height="150" width="500"><br><img src = "img/packages.jpg" height="150" width="250"><img src = "img/git.png" height="150" width="175"><br><img src = "img/sklearn.jpg" height="150" width="175"></p>
 
 
 ## Exploratory Data Analysis
