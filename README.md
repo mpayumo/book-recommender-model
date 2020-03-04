@@ -92,7 +92,7 @@ Before moving further, here is a comparison of the RMSE scores. BaselineOnly alg
 
 | RMSE (Baseline) | RMSE (Best Estimator) |
 | :----:          | :----:                |
-| 3.597           | 3.3298                |
+| 3.597           | 3.329                |
 
 Below is the cross validation and iteration through various algorithms with RMSE as an evaluation metric similarly utilized to determine which will be our best estimator.
 
