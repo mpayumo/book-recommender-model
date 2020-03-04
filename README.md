@@ -47,7 +47,7 @@ While there is no correlation between average rating and the rating count, this 
 
 Books published in 2002 were rated the most by 17,627 users. Those that were published between 1975 to 2002 received the most ratings. In order to maintain statistic significance, we will trim down our dataset to this range of years of publication during modeling.
 
-<p align = "center"><img src = "img/timeseries.jpg" height="700" width="700"></p>
+<p align = "center"><img src = "img/timeseries.jpg" height="500" width="700"></p>
 
 ### Countries of Origin
 
