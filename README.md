@@ -49,7 +49,7 @@ While there is no correlation between average rating and the rating count, this 
 
 ### Rated Books by Publication Year
 
-Books published in 2002 were rated the most by 17,627 users. Those that were published between 1975 to 2002 received the most ratings.
+Books published in 2002 were rated the most by 17,627 users. Those that were published between 1975 to 2002 received the most ratings. In order to maintain statistic significance, we will trim down our dataset to this range of years of publication during modeling.
 
 <p align = "center"><img src = "img/timeseries.jpg"></p>
 
@@ -92,7 +92,7 @@ Before moving further, here is a comparison of the RMSE scores. BaselineOnly alg
 
 | RMSE (Baseline) | RMSE (Best Estimator) |
 | :----:          | :----:                |
-| 3.597           | 3.329                |
+| 3.597           | 3.329                 |
 
 Below is the cross validation and iteration through various algorithms with RMSE as an evaluation metric similarly utilized to determine which will be our best estimator.
 
