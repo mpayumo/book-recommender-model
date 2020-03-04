@@ -22,6 +22,8 @@ The model utilizes the dataset that was collected by [Cai-Nicolas Ziegler](http:
 
 ## Tech Stack
 
+<p align = "center"><img src = "img/aws.png"><br><img src = "img/packages.jpg"><br><img src = "img/git.png"></p>
+
 The following were used in the development of the recommender system:
 
 | Tools               | Packages     |
