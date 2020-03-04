@@ -80,17 +80,27 @@ In the case of a brand new user with no prior information on their preference, w
 
 ### Pearson R
 
-Modeling began with Pearson correlation as a basic form of model, allowing us to recommend the top 10 most rated books as well as pick out those that are strongly correlated to a book of choice based on ISBN. The Pearson R model is [here.](https://github.com/mpayumo/book-recommender-model/tree/master/model)
+We use Pearson correlation as a basic form of model, allowing us to pick out those that are strongly correlated to a book of choice based on the book's ISBN code. The Pearson R model is [here.](https://github.com/mpayumo/book-recommender-model/tree/master/model) Below is a sample of recommended books on a randomly chosen ISBN code, <code>0316666343</code>.
 
-<p align = "center"><img src = "img/mostrated15.jpg"></p>
+<p align = "center"><img src = "img/pearson-correlated-titles.jpg"></p>
 
-### Algorithms
+### Best Estimator with Surprise
 
-This recommender system is based on heavy use of the **Surprise** package that allowed us to iterate and cross-validate through different algortihms as shown below. Cross-validation was set to **5 folds** and utilized the **root mean squared error (RMSE)** as our **evaluation metric** to determine which algorithm will give us the best predictions. The iteration is shown on the table below.
+The more nuanced modeling process is based on heavy use of the **Surprise** package that allowed us to iterate and cross-validate through different algorithms as shown below. Cross-validation was set to **5 folds** and utilized the **root mean squared error (RMSE)** as our **evaluation metric** to determine which algorithm will give us the best predictions. The iteration is shown on the table below.
+
+Before moving further, here is a comparison of the RMSE scores. BaselineOnly algorithm gave us the lower score that we can be comfortable with using for now.
+
+| RMSE (Baseline) | RMSE (Best Estimator) |
+| :----:          | :----:                |
+| 3.597           | 3.3298                |
+
+Below is the cross validation and iteration through various algorithms with RMSE as an evaluation metric similarly utilized to determine which will be our best estimator.
 
 <p align = "center"><img src = "img/surprise_results.jpg"></p>
 
-BaselineOnly becomes our algorithm of choice as it shows the most promise with the lowest RMSE of <code>3.329897413613890</code>. We then set our top N recommended books to 3, but the model is flexible to recommend as many as there are in the predictions. The top 3 book titles are recommended for our top 5 random users as shown below.
+BaselineOnly becomes our algorithm of choice as it shows the most promise with the lowest RMSE of <code>3.3298</code>. We then set our top N recommended books to 3, but the model is flexible to recommend as many as there are in the predictions.
+
+The top 3 book titles are recommended for our top 5 random users as shown below.
 <br>
 <br>
 <p align = "center"><img src = "img/top3_books.jpg"></p>
@@ -100,7 +110,7 @@ BaselineOnly becomes our algorithm of choice as it shows the most promise with t
 The model will further benefit from the following for improvement and more accurate results:
 
 <ul>
+    <li>Tuning best estimator with GridSearchCV</li>
     <li>Deep Learning</li>
-    <li>Fusion with Flask </li>
-    <li>Additional data</li>
+    <li>Flask Integration</li>
 </ul>
