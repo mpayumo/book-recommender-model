@@ -98,7 +98,7 @@ Below is the cross validation and iteration through various algorithms with RMSE
 
 <p align = "center"><img src = "img/surprise_results.jpg"></p>
 
-BaselineOnly becomes our algorithm of choice as it shows the most promise with the lowest RMSE of <code>3.3298</code>. We then set our top N recommended books to 3, but the model is flexible to recommend as many as there are in the predictions.
+BaselineOnly becomes our algorithm of choice as it shows the most promise with the lowest RMSE of <code>3.329</code>. We then set our top N recommended books to 3, but the model is flexible to recommend as many as there are in the predictions.
 
 ## Recommendations
 
