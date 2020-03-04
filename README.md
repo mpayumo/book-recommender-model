@@ -82,7 +82,7 @@ We use Pearson correlation as a basic form of model, allowing us to pick out tho
 
 ### Best Estimator with Surprise
 
-The more nuanced modeling process is based on heavy use of the **Surprise** package that allowed us to iterate and cross-validate through different algorithms as shown below. Cross-validation was set to **5 folds** and utilized the **root mean squared error (RMSE)** as our **evaluation metric** to determine which algorithm will give us the best predictions. The iteration is shown on the table below.
+The more nuanced modeling process is based on heavy use of the **Surprise** package that allowed us to iterate and cross-validate through different algorithms as shown below. Cross-validation was set to **5 folds** and utilized the **root mean squared error (RMSE)** as our **evaluation metric** to determine which algorithm will give us the best predictions.
 
 Before moving further, here is a comparison of the RMSE scores. BaselineOnly algorithm gave us the lower score that we can be comfortable with using for now.
 
