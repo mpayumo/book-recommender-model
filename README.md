@@ -22,7 +22,7 @@ The model utilizes the dataset that was collected by [Cai-Nicolas Ziegler](http:
 
 ## Tech Stack
 
-<p align = "center"><img src = "img/aws.png" height="200" width="500"><br><img src = "img/packages.jpg" height="200" width="250"><br><img src = "img/git.png" height="200" width="250"></p>
+<p align = "center"><img src = "img/aws.png" height="150" width="500"><br><img src = "img/packages.jpg" height="200" width="250"><br><img src = "img/git.png" height="200" width="250"></p>
 
 The following were used in the development of the recommender system:
 
