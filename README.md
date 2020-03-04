@@ -8,7 +8,7 @@ Exploratory data analysis and recommender model development of dataset from [Boo
 
 ![The New York Public Library](img/nyc_library.jpg "The New York Public Library by David Iliff via Wikimedia Commons")
 
-The **goal** of this project is to demonstrate development of a recommender system that highlights trends hidden behind user data that can potentially inform business development of a book store or book club like Book Crossing, and give its users a go-to resource for other books that might interest them and have them looking forward to as they engage in "the practice of leaving a book in a public place to be picked up and read by others, who then do likewise." 
+The **goal** of this project is to demonstrate development of a recommender system that highlights trends hidden behind user data that can potentially inform business development of a book store or book club like Book Crossing. It can also give users a go-to resource for other books that might interest them and have them looking forward to as they engage in "the practice of leaving a book in a public place to be picked up and read by others, who then do likewise." 
 
 ## Data Source
 
