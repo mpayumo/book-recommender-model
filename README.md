@@ -80,6 +80,7 @@ The arrays of values that simulated actual and predicted book ratings are from t
 
 Modeling began with Pearson correlation as a basic form of model, allowing us to recommend the top 10 most rated books as well as pick out those that are strongly correlated to a book of choice based on ISBN. The Pearson R model is [here.](https://github.com/mpayumo/book-recommender-model/tree/master/model)
 
+<p align = "center"><h3>Sampling of Most Rated Books Dataframe</h3></p>
 <p align = "center"><img src = "img/mostrated15.jpg"></p>
 
 ### Algorithms
