@@ -94,13 +94,13 @@ Below is the cross validation and iteration through various algorithms with RMSE
 
 <p align = "center"><img src = "img/surprise_results.jpg"></p>
 
-BaselineOnly becomes our algorithm of choice as it shows the most promise with the lowest RMSE of <code>3.329</code>. We then set our top N recommended books to 3, but **[this model](https://github.com/mpayumo/book-recommender-model/blob/master/model/model.py)** is flexible to recommend as many as there are in the predictions.
+**BaselineOnly** becomes our algorithm of choice as it shows the most promise with the lowest RMSE of <code>3.329</code>. We then set our top N recommended books to 3, but **[this model](https://github.com/mpayumo/book-recommender-model/blob/master/model/model.py)** is flexible to recommend as many as there are in the predictions.
 
 ---
 
 ## Recommendations
 
-> ### The top 3 book titles are recommended for our top 5 random users as shown below.
+> ### The top 3 book titles are recommended for our first 5 random users as shown below.
 <p align = "center"><img src = "img/top3_books.jpg"></p>
 
 ---
