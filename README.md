@@ -69,18 +69,18 @@ The U.S. tops the list of users' countries of origin at 139,711. Below is just t
 
 In order to benchmark our recommender system's performance, we need a baseline model to compare it with. I utilized the array of values from (1) the average rating of each book's unique ISBN code and (2) the total number ratings received by each unique book based on their ISBN codes.
 
-Sci-kit Learn's mean_squared_error metric function was particularly helpful that yielded an <code>RMSE</code> of <code>3.597</code> for our **dumb model**.
+Sci-kit Learn's mean_squared_error metric function was particularly helpful that yielded an <code>RMSE</code> of <code>3.597</code> for our **dumb model**. The arrays of values that simulated actual and predicted book ratings are from the "Most Rated Books" dataframe.
 
-The arrays of values that simulated actual and predicted book ratings are from the "Most Rated Books" dataframe. Below is a sample of 15 entries from this data.
+### Cold Start: Top 10 Most Rated
 
-<p align = "center"><img src = "img/mostrated15.jpg"></p>
+In the case of a brand new user with no prior information on their preference, we defer to the most rated books as shown below.
+
+<p align = "center"><img src = "img/pearson-most-rated-1.jpg"></p>
 
 
 ### Pearson R
 
 Modeling began with Pearson correlation as a basic form of model, allowing us to recommend the top 10 most rated books as well as pick out those that are strongly correlated to a book of choice based on ISBN. The Pearson R model is [here.](https://github.com/mpayumo/book-recommender-model/tree/master/model)
-
-          ### Sampling of Most Rated Books Dataframe
 
 <p align = "center"><img src = "img/mostrated15.jpg"></p>
 
