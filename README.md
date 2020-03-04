@@ -103,8 +103,6 @@ BaselineOnly becomes our algorithm of choice as it shows the most promise with t
 ## Recommendations
 
 > ### The top 3 book titles are recommended for our top 5 random users as shown below.
-<br>
-<br>
 <p align = "center"><img src = "img/top3_books.jpg"></p>
 
 ## Future Direction and Next Steps
