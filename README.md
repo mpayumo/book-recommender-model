@@ -39,7 +39,7 @@ The donut chart below shows those books that were rated "0" own the lion's share
 
 <p align = "center"><img src = "img/wedge_donut.jpg"></p>
 
-While there is no correlation between average rating and the rating count, this joint plot nevertheless shows that average user ratings cluster between 2 to 5.
+While there is no correlation between average rating and the rating count, this joint plot nevertheless shows that average user ratings cluster between 2 to 5. This will help inform the modeling process in setting our baseline model whether the average ratings will be validated by the scatter plot.
 
 <p align = "center"><img src = "img/jointplot.jpg"></p>
 
